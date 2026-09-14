@@ -14,7 +14,29 @@
 
     <main>
       <section id="activities-container">
-        <h3>Available Activities</h3>
+        <div class="section-heading">
+          <h3>Available Activities</h3>
+          <span id="activity-count" class="activity-count" aria-live="polite"></span>
+        </div>
+        <div class="activity-controls" aria-label="Activity filters">
+          <label class="search-field" for="activity-search">
+            <span>Search activities</span>
+            <input type="search" id="activity-search" placeholder="Search by name or description" />
+          </label>
+          <label for="category-filter">
+            <span>Category</span>
+            <select id="category-filter">
+              <option value="all">All categories</option>
+            </select>
+          </label>
+          <label for="sort-activities">
+            <span>Sort by</span>
+            <select id="sort-activities">
+              <option value="name">Name</option>
+              <option value="schedule">Schedule</option>
+            </select>
+          </label>
+        </div>
         <div id="activities-list">
           <!-- Activities will be loaded here -->
           <p>Loading activities...</p>

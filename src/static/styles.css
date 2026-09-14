@@ -57,6 +57,43 @@ section h3 {
   color: #1a237e;
 }
 
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.activity-count {
+  color: #666;
+  font-size: 14px;
+}
+
+.activity-controls {
+  display: grid;
+  grid-template-columns: minmax(180px, 2fr) 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.activity-controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #555;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.activity-controls input,
+.activity-controls select {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
 .activity-card {
   margin-bottom: 15px;
   padding: 15px;
@@ -68,6 +105,34 @@ section h3 {
 .activity-card h4 {
   margin-bottom: 10px;
   color: #0066cc;
+}
+
+.activity-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.activity-card-header h4 {
+  margin-bottom: 0;
+}
+
+.category-badge {
+  padding: 3px 8px;
+  border-radius: 12px;
+  background-color: #e8eaf6;
+  color: #1a237e;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.empty-state {
+  padding: 20px 0;
+  color: #666;
+  text-align: center;
 }
 
 .activity-card p {
@@ -197,4 +262,15 @@ footer {
   margin-top: 30px;
   padding: 20px;
   color: #666;
+}
+
+@media (max-width: 600px) {
+  .activity-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-card-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
